@@ -1,0 +1,39 @@
+package com.gym.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gym.model.ContactUs;
+import com.gym.service.ConatctUsSeviceImpl;
+import com.gym.service.ContactUsService;
+
+@CrossOrigin
+@RestController
+@RequestMapping("/contactUs")
+public class ContactUsController {
+
+	@Autowired
+	ContactUsService contactUsService;
+	
+//	@PostMapping("/postFeedback")
+//	public void getFeedback( ContactUs formData )
+//	{
+//		System.out.println(formData.getEmail());
+//		System.out.println(formData.getFeedback());
+//		contactUsService.saveFeedback(formData);
+//	}
+	
+	@PostMapping("/postFeedback")
+	public ContactUs save(@RequestBody  ContactUs contactUs) {
+
+		
+		
+
+		return contactUsService.saveFeedback(contactUs);
+	}
+	
+}

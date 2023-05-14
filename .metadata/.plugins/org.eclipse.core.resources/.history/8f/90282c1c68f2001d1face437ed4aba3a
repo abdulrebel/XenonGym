@@ -1,0 +1,5 @@
+package com.gym.repo;
+
+public interface ContactUsRepository {
+
+}

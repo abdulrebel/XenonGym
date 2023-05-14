@@ -1,0 +1,10 @@
+package com.gym.service;
+
+import com.gym.model.ContactUs;
+import com.gym.model.Users;
+
+public interface ContactUsService {
+
+	Users saveFeedback(ContactUs contactUs);
+
+}

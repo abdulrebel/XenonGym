@@ -1,0 +1,22 @@
+package com.gym.service;
+
+import java.util.List;
+
+
+import org.springframework.stereotype.Service;
+
+import com.gym.model.Users;
+
+@Service
+public interface UserService {
+
+	
+	public Users saveUser(Users User);
+	public List<Users> getUsers();
+	public Users getUserById(int id);
+	public void deleteUser(int id);
+	public Users modify(Users User,int id);
+	
+	
+	
+}

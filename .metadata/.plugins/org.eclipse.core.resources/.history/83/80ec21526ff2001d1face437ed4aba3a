@@ -1,0 +1,21 @@
+package com.gym.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gym.model.ContactUs;
+import com.gym.model.Users;
+import com.gym.repo.ContactUsRepository;
+
+@Service
+public class ConatctUsSeviceImpl implements ContactUsService{
+
+	@Autowired
+	ContactUsRepository contactUsRepository;
+	
+	@Override
+	public ContactUs saveFeedback(ContactUs contactUs) {
+		// TODO Auto-generated method stub
+		return contactUsRepository.save(contactUs);
+	}
+}

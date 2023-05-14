@@ -1,0 +1,47 @@
+package com.gym.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gym.model.Users;
+import com.gym.repo.UsersRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	UsersRepository userRepository;
+	
+	@Override
+	public Users saveUser(Users user) {
+		// TODO Auto-generated method stub
+		return userRepository.save(user);
+	}
+
+	@Override
+	public List<Users> getUsers() {
+		// TODO Auto-generated method stub
+		return userRepository.findAll();
+	}
+
+	@Override
+	public Users getUserById(int id) {
+		// TODO Auto-generated method stub
+		return userRepository.findById(id).orElse(null);
+	}
+
+	@Override
+	public void deleteUser(int id) {
+		userRepository.deleteById(id);;// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Users modify(Users user, int id) {
+		// TODO Auto-generated method stub
+		return userRepository.save(user);
+	}
+
+}

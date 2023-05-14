@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.sportsacademia.repo.AcademyRepository"/>
+    <fullyQualifiedTypeName name="com.sportsacademia.repo.SportRepository"/>
+    <fullyQualifiedTypeName name="com.sportsacademia.model.Academy"/>
+    <fullyQualifiedTypeName name="com.sportsacademia.model.Sport"/>
+</qualifiedTypeNameHistroy>
